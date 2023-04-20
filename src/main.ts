@@ -6,6 +6,7 @@ import router from './router'
 
 import './assets/main.css'
 console.log(import.meta.env,"console")
+console.log(import.meta.env.VITE_TEST,"console2")
 const app = createApp(App)
 
 app.use(createPinia())
