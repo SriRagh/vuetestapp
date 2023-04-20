@@ -1,4 +1,5 @@
 <script setup lang="ts">
+console.log('hey sri you did it')
 defineProps<{
   msg: string
 }>()
