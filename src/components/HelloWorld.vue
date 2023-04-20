@@ -1,4 +1,6 @@
 <script setup lang="ts">
+console.log(import.meta.env, 'console11')
+console.log(import.meta.env.VITE_TEST, 'console222')
 console.log('hey sri you did it')
 defineProps<{
   msg: string
