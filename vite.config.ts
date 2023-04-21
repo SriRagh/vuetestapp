@@ -18,7 +18,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 
     if (command === 'serve') {
       const env = loadEnv(mode, process.cwd(), "")
-console.log("sri if", mode, command, ssrBuild, env)
+console.log("sri if", mode, command, ssrBuild, env, process.env.VITE_TEST)
       return {
         plugins: [vue(), vueJsx()],
         envDir: 'src',
@@ -32,9 +32,12 @@ console.log("sri if", mode, command, ssrBuild, env)
     } else {
       const env = loadEnv(mode, process.cwd(), "")
       console.log("sri else", mode, command, ssrBuild, env)
+      console.log("else if ", process.env.VITE_TEST)
       // command === 'build'
       return {
-     
+        define: {
+          APP_ENV: env,
+        },
         plugins: [vue(), vueJsx()],
         envDir: 'src',
         resolve: {
