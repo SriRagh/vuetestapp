@@ -3,8 +3,10 @@ import { createPinia } from 'pinia'
 console.log(import.meta, "1", import.meta.env)
 import App from './App.vue'
 import router from './router'
-console.log("sri", __APP_VERSION__);
-console.log(process.env.VARIABLE_NAME, "process.env var");
+const key = "VITE_TEST"
+import.meta.env[key]
+console.log("env filekey", import.meta.env[key])
+console.log(__APP_VERSION__, "process.env var", __APP_VER__);
 import './assets/main.css'
 
 const app = createApp(App)

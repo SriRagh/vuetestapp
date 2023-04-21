@@ -24,7 +24,7 @@ export default defineConfig({
   },
   build: {
     define: {
-      'process.env.VARIABLE_NAME': JSON.stringify(process.env),
+      __APP_VER__: JSON.stringify(process.env),
       // add more variables as needed
     },
   },
