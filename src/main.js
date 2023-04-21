@@ -5,8 +5,8 @@ import App from './App.vue'
 import router from './router'
 const key = "VITE_TEST"
 import.meta.env[key]
-console.log("env filekey", import.meta.env[key])
-console.log(__APP_VERSION__, "process.env var", __APP_VER__);
+console.log("env filekey", import.meta.env[key], import.meta.env)
+console.log(__APP_VERSION__, "process.env var");
 import './assets/main.css'
 
 const app = createApp(App)
