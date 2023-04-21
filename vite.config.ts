@@ -39,13 +39,13 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
       console.log("sri else", mode, command, ssrBuild, env)
       // command === 'build'
       return {
+        plugins: [vue(), vueJsx()],
+        envDir: 'src',
         define: {
 
           __APP_VERSION__: JSON.stringify(process.env),
           
        },
-        plugins: [vue(), vueJsx()],
-        envDir: 'src',
         resolve: {
               alias: {
                 '@': fileURLToPath(new URL('./src', import.meta.url))
