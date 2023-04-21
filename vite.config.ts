@@ -18,10 +18,15 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 
     if (command === 'serve') {
       const env = loadEnv(mode, process.cwd(), "")
-console.log("sri if", mode, command, ssrBuild, env, process.env.VITE_TEST)
+// console.log("sri if", mode, command, ssrBuild, env, process.env.VITE_TEST)
       return {
         plugins: [vue(), vueJsx()],
         envDir: 'src',
+        define: {
+
+          __APP_VERSION__: JSON.stringify(process.env),
+          
+       },
         resolve: {
               alias: {
                 '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -32,12 +37,13 @@ console.log("sri if", mode, command, ssrBuild, env, process.env.VITE_TEST)
     } else {
       const env = loadEnv(mode, process.cwd(), "")
       console.log("sri else", mode, command, ssrBuild, env)
-      console.log("else if ", process.env.VITE_TEST)
       // command === 'build'
       return {
         define: {
-          APP_ENV: env,
-        },
+
+          __APP_VERSION__: JSON.stringify(process.env),
+          
+       },
         plugins: [vue(), vueJsx()],
         envDir: 'src',
         resolve: {

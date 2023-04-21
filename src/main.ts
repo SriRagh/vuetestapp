@@ -5,8 +5,7 @@ import App from './App.vue'
 import router from './router'
 
 import './assets/main.css'
-const azureConnectionString = process.env;
-console.log(import.meta.env.PORT,"console", azureConnectionString )
+console.log(__APP_VERSION__,"console" )
 console.log(import.meta.env.VITE_TEST,"console2")
 const app = createApp(App)
 
