@@ -21,5 +21,11 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  build: {
+    define: {
+      'process.env.VARIABLE_NAME': JSON.stringify(process.env),
+      // add more variables as needed
+    },
+  },
 })
