@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-console.log(import.meta, "1", import.meta.env.__APP_ENV__, import.meta.__APP_ENV__)
+console.log(import.meta, "1", import.meta.env)
 import App from './App.vue'
 import router from './router'
 console.log("sri", __APP_VERSION__)
