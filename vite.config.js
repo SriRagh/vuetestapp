@@ -1,9 +1,5 @@
-
 import { fileURLToPath, URL } from 'node:url'
 
-import dotenv from 'dotenv';
-
-dotenv.config();
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -21,11 +17,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  build: {
-    define: {
-      __APP_VER__: JSON.stringify(process.env),
-      // add more variables as needed
-    },
-  },
+  }
 })
