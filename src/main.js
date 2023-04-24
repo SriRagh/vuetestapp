@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-console.log(__APP_VERSION__, import.meta.env )
+console.log(process.env, import.meta.env )
 import App from './App.vue'
 import router from './router'
-console.log("sri", )
+console.log("sri",process.env.MY_ENV_VAR )
 import './assets/main.css'
 
 const app = createApp(App)
