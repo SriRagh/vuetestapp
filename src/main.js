@@ -3,7 +3,7 @@ import { createPinia } from 'pinia'
 console.log( import.meta.env )
 import App from './App.vue'
 import router from './router'
-console.log("sri",process.env.MY_ENV_VAR )
+console.log("sri",process )
 import './assets/main.css'
 
 const app = createApp(App)
