@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-console.log(process.env, import.meta.env )
+console.log( import.meta.env )
 import App from './App.vue'
 import router from './router'
 console.log("sri",process.env.MY_ENV_VAR )
